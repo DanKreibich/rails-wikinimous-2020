@@ -1,0 +1,9 @@
+<h1>Wikinomous</h1>
+<p>You anonymous Wikipedia</p>
+<h3> <%= link_to "Create your own article", new_article_path %> </h3>
+
+<% @articles.each do |article| %>
+  <div>
+    <h2> <%= link_to article.title, article_path(article) %> </h2>
+  </div>
+<% end %>
